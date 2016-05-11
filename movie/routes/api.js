@@ -13,12 +13,12 @@ router.route('/movies')
 //查询所有电影
 .get(function (req, res) {
         Movie.find(function (err, movies) {
-            if (err) {
-                return res.send(err);
-            }
-            res.json(movies);
-        });
-    })
+if (err) {
+    return res.send(err);
+}
+res.json(movies);
+});
+})
 //新增一个电影
 .post(function (req, res) {
             var movie = new Movie(req.body);
